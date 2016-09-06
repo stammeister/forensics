@@ -1,6 +1,17 @@
-print "Type the file you want to open:"
-file_open = raw_input(">>>>")
+from sys import argv
 
-txt_content = open(file_open)
+script,filename = argv
 
-print txt_content.read()
+open_file=open(filename)
+
+print "so you want to open %r"  %filename
+
+print open_file.read()
+
+print "Type the filename again"
+
+type_file=raw_input("")
+
+open_type=open(type_file)
+
+print open_type.read()
